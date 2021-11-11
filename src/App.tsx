@@ -3,7 +3,8 @@ import "./App.css";
 import { ChakraProvider, Flex, extendTheme } from "@chakra-ui/react";
 import { QueryClient, QueryClientProvider } from "react-query";
 
-import { Demo } from "./components/Demo";
+import { HeaderComponent } from "./components/header";
+import { ProjectContainer } from "./components/projects";
 
 const queryClient = new QueryClient();
 
@@ -14,7 +15,8 @@ function App() {
         <QueryClientProvider client={queryClient}>
             <ChakraProvider theme={theme}>
                 <Flex direction="column" boxSize="100%">
-                    <Demo />
+                    <HeaderComponent />
+                    <ProjectContainer />
                 </Flex>
             </ChakraProvider>
         </QueryClientProvider>
