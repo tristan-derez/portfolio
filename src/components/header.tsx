@@ -43,11 +43,10 @@ export const HeaderComponent = () => {
                 {/* Hamburger Icon/Open Menu Button */}
                 <IconButton
                     aria-label="open menu"
-                    size="lg"
-                    mr={2}
                     icon={<HamburgerIcon />}
                     display={["flex", "flex", "none", "none"]}
                     onClick={() => changeDisplay("flex")}
+                    bg="none"
                 />
                 {/* Toggle Light/Dark Mode Button */}
                 <IconBut isRound="yes" onClick={toggleColorMode}>
@@ -64,7 +63,6 @@ export const HeaderComponent = () => {
                 left="0"
                 overflowY="auto"
                 flexDir="column"
-                color="black"
                 display={display}
                 background={colorMode === "light" ? "#1A202C" : "#283048"}
             >
@@ -77,6 +75,7 @@ export const HeaderComponent = () => {
                         size="lg"
                         icon={<CloseIcon />}
                         onClick={() => changeDisplay("none")}
+                        bg="none"
                     />
                 </Flex>
                 <Flex flexDir="column" align="center" fontFamily="Anonymous Pro">
