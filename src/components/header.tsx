@@ -10,13 +10,7 @@ export const HeaderComponent = () => {
     const { toggleColorMode, colorMode } = useColorMode();
     let [display, changeDisplay] = useState("none");
     return (
-        <Flex
-            w="100%"
-            pos="fixed"
-            padding="5px"
-            background={colorMode === "light" ? "#1A202C" : "#283048"}
-            color="white"
-        >
+        <Flex w="100%" pos="fixed" padding="5px" color={useColorModeValue("black", "white")}>
             <Flex ml="20px">
                 <HeaderLink
                     href="#"
