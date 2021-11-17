@@ -6,7 +6,7 @@ import { data } from "../data/data.js";
 
 export const ProjectContainer = () => {
     return (
-        <Spacer h="100%" w="auto" fontFamily="Anonymous Pro">
+        <Spacer h="100vh" w="100%" fontFamily="Anonymous Pro">
             <Heading>
                 <Center fontFamily="Anonymous Pro">Projets</Center>
             </Heading>
@@ -22,7 +22,7 @@ export const ProjectContainer = () => {
 const ProjectItem = ({ data }) => {
     return (
         <Link href={data.adress}>
-            <WrapItem borderWidth="1px" borderRadius="lg" overflow="hidden">
+            <WrapItem borderWidth="1px" borderRadius="lg">
                 <Center flexDirection="column" width={{ base: "300px", md: "350px", lg: "600px" }} minWidth="300px">
                     <Image src={data.imageUrl} alt={data.imageAlt} />
                     <Box d="flex" alignItems="baseline">

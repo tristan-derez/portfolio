@@ -73,12 +73,6 @@ export const HeaderComponent = () => {
                     />
                 </Flex>
                 <Flex flexDir="column" align="center" fontFamily="Anonymous Pro">
-                    <HeaderLink href="#about" mt="40px">
-                        A propos
-                    </HeaderLink>
-                    <HeaderLink href="#projects" mt="40px">
-                        Projets
-                    </HeaderLink>
                     <HeaderLink href="#contact" mt="40px">
                         Contact
                     </HeaderLink>
