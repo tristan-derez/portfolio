@@ -96,7 +96,18 @@ export const HeaderComponent = () => {
 
 const HeaderLink = ({ children, ...props }) => {
     return (
-        <chakra.a cursor="pointer" _hover={{ fontWeight: "bold", transform: "translateY(3px)" }} {...props}>
+        <chakra.a
+            padding="10px"
+            cursor="pointer"
+            _hover={{
+                backgroundImage: "url('/images/trace-peinture-orange.png')",
+                backgroundSize: "cover",
+                backgroundRepeat: "round",
+                fontWeight: "bold",
+                transform: "translateY(3px)",
+            }}
+            {...props}
+        >
             {children}
         </chakra.a>
     );
