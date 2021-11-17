@@ -11,7 +11,7 @@ export const HeaderComponent = () => {
     let [display, changeDisplay] = useState("none");
     return (
         <Flex w="100%" pos="fixed" padding="5px" color={useColorModeValue("black", "white")}>
-            <Flex ml="20px">
+            <Flex>
                 <HeaderLink
                     href="#"
                     onClick={() => window.scrollTo(0, 0)}
