@@ -3,6 +3,7 @@ import "@fontsource/anonymous-pro";
 
 import {
     Box,
+    Button,
     Center,
     Flex,
     Heading,
