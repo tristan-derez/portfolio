@@ -2,7 +2,17 @@ import "@fontsource/permanent-marker";
 import "@fontsource/anonymous-pro";
 
 import { CloseIcon, HamburgerIcon } from "@chakra-ui/icons";
-import { Flex, HStack, IconButton, Spacer, chakra, useColorMode, useColorModeValue } from "@chakra-ui/react";
+import {
+    Flex,
+    HStack,
+    IconButton,
+    Image,
+    Link,
+    Spacer,
+    chakra,
+    useColorMode,
+    useColorModeValue,
+} from "@chakra-ui/react";
 import { useState } from "react";
 import { IoMdMoon, IoMdSunny } from "react-icons/io";
 
@@ -12,14 +22,9 @@ export const HeaderComponent = () => {
     return (
         <Flex w="100%" pos="fixed" padding="5px" color={useColorModeValue("black", "white")}>
             <Flex>
-                <HeaderLink
-                    href="#"
-                    onClick={() => window.scrollTo(0, 0)}
-                    fontFamily="Permanent marker"
-                    fontSize="30px"
-                >
-                    Tristan Derez
-                </HeaderLink>
+                <Link href="#" onClick={() => window.scrollTo(0, 0)}>
+                    <Image src="../../public/images/logo_tristan.png" boxSize="40px" />
+                </Link>
             </Flex>
             <Spacer />
             <HStack
