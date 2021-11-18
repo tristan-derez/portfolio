@@ -6,7 +6,7 @@ import { data } from "../data/data.js";
 
 export const ProjectContainer = () => {
     return (
-        <Spacer h="100vh" w="100%" fontFamily="Anonymous Pro">
+        <Spacer minHeight="100vh" w="100%" fontFamily="Anonymous Pro">
             <Heading>
                 <Center fontFamily="Anonymous Pro">Projets</Center>
             </Heading>
