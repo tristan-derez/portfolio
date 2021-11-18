@@ -34,4 +34,22 @@ export const data = [
         description: "Projet en cours",
         adress: "",
     },
+    {
+        imageUrl:
+            "https://images.unsplash.com/photo-1627549572210-62e7d8241309?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80",
+        imageAlt: "placeholder",
+        stackUsed: "React, Chakra-UI",
+        title: "Bientôt",
+        description: "Projet en cours",
+        adress: "",
+    },
+    {
+        imageUrl:
+            "https://images.unsplash.com/photo-1627549572210-62e7d8241309?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80",
+        imageAlt: "placeholder",
+        stackUsed: "React, Chakra-UI",
+        title: "Bientôt",
+        description: "Projet en cours",
+        adress: "",
+    },
 ];
