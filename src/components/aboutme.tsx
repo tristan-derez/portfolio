@@ -22,10 +22,10 @@ export const AboutMeContainer = (props) => {
     const textlink = useColorModeValue("orange.400", "orange.600");
     return (
         <Flex
-            h="100vh"
+            minHeight="100vh"
             w="100vw"
             spacing="25px"
-            flexDirection={["column", "column", "row", "row"]}
+            flexDirection={["column", "column", "column", "row"]}
             alignItems="center"
             justifyContent="center"
             mt={["20px", "20px", 0]}
@@ -37,20 +37,19 @@ export const AboutMeContainer = (props) => {
                 src="https://i.ibb.co/9nm1rw7/download20210300011044.png"
                 alt="Profile pic"
                 fit="scale-down"
-                ml={[0, 0, "50px"]}
+                ml={[0, 0, 0, "50px"]}
             />
             <Box
                 fontSize="50px"
                 mr={["10px", "10px", "50px"]}
                 ml={["10px", "10px", "50px"]}
-                mt={["20px", "20px", 0]}
+                mt={["20px", "20px", "20px", 0]}
                 w={["auto", "auto", "700px", "800px"]}
-                textAlign={["center", "center", "justify"]}
             >
-                <Heading fontFamily="Permanent Marker" mb="15px">
+                <Heading fontFamily="Permanent Marker" mb="15px" textAlign={["center", "center", "center", "justify"]}>
                     Tristan Derez
                 </Heading>
-                <Text fontFamily="Anonymous Pro" fontSize="20px">
+                <Text fontFamily="Anonymous Pro" fontSize="20px" textAlign={["left", "left", "left", "justify"]}>
                     Bonjour ! Suite à l'apprentissage en autodidacte du développement Front-End avec{" "}
                     <AboutMeLink href="https://codecademy.com" color={textlink}>
                         Codecademy
