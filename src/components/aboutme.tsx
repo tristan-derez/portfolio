@@ -28,7 +28,7 @@ export const AboutMeContainer = (props) => {
             flexDirection={["column", "column", "column", "row"]}
             alignItems="center"
             justifyContent="center"
-            mt={["20px", "20px", 0]}
+            mt={["75px", "75px", 0]}
             {...props}
         >
             <Image
