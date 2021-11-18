@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import { Link, Route } from "react-router-dom";
 
 import { AboutMeContainer } from "./components/aboutme";
+import { Contact } from "./components/contact";
 import { HeaderComponent } from "./components/header";
 import { ProjectContainer } from "./components/projects";
 
@@ -20,6 +21,7 @@ function App() {
                     <HeaderComponent />
                     <AboutMeContainer />
                     <ProjectContainer />
+                    <Contact />
                 </Flex>
             </ChakraProvider>
         </QueryClientProvider>
