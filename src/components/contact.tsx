@@ -5,6 +5,7 @@ import {
     Button,
     FormControl,
     FormLabel,
+    Heading,
     Input,
     Stack,
     Textarea,
@@ -54,8 +55,9 @@ export const Contact = (props) => {
     const background = useColorModeValue("orange.400", "orange.600");
     return (
         <Stack h="100vh" alignItems="center" justifyContent="center" {...props} fontFamily="Anonymous Pro">
+            <Heading>Contactez-moi</Heading>
             <form onSubmit={handleSubmit}>
-                <Box width={["320px", "450px", "600px", "800px"]}>
+                <Box width={["320px", "450px", "600px", "800px"]} mt="40px">
                     <Box>
                         <FormControl id="first-name" isRequired />
                         <FormLabel>Nom:</FormLabel>
