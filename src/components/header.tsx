@@ -64,6 +64,8 @@ export const HeaderComponent = () => {
                 flexDir="column"
                 display={display}
                 background={colorMode === "light" ? "#1A202C" : "#283048"}
+                opacity="0.8"
+                position="absolute"
             >
                 <Flex justify="flex-end">
                     {/* Close Icon Button */}
