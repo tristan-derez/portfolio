@@ -63,9 +63,10 @@ export const HeaderComponent = () => {
                 overflowY="auto"
                 flexDir="column"
                 display={display}
-                background={colorMode === "light" ? "#1A202C" : "#283048"}
-                opacity="0.8"
+                color={useColorModeValue("black", "white")}
+                background={useColorModeValue("#FFFFFF", "#1A202C")}
                 position="absolute"
+                opacity="0.5"
             >
                 <Flex justify="flex-end">
                     {/* Close Icon Button */}
