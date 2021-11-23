@@ -66,7 +66,6 @@ export const HeaderComponent = () => {
                 color={useColorModeValue("black", "white")}
                 background={useColorModeValue("#FFFFFF", "#1A202C")}
                 position="absolute"
-                opacity="0.5"
             >
                 <Flex justify="flex-end">
                     {/* Close Icon Button */}
