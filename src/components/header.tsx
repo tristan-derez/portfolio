@@ -66,7 +66,7 @@ export const HeaderComponent = () => {
                 pos="fixed"
                 top="0"
                 left="0"
-                overflowY="auto"
+                overflow="none"
                 flexDir="column"
                 display={display}
                 color={useColorModeValue("black", "white")}
