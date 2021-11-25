@@ -3,6 +3,7 @@ import "@fontsource/anonymous-pro";
 import {
     Box,
     Button,
+    Flex,
     FormControl,
     FormLabel,
     Heading,
@@ -14,6 +15,8 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import { useState } from "react";
+
+import { HeaderComponent } from "./header";
 
 export const Contact = (props) => {
     const [status, setStatus] = useState("Submit");
@@ -54,31 +57,39 @@ export const Contact = (props) => {
     };
     const background = useColorModeValue("orange.400", "orange.600");
     return (
-        <Stack h="100vh" alignItems="center" justifyContent="center" {...props} fontFamily="Anonymous Pro">
-            <Heading>Contactez-moi</Heading>
-            <form onSubmit={handleSubmit}>
-                <Box width={["320px", "450px", "600px", "800px"]} mt="40px">
-                    <Box>
-                        <FormControl id="first-name" isRequired />
-                        <FormLabel>Nom:</FormLabel>
-                        <Input placeholder="Nom" name="name" focusBorderColor={background} />
-                    </Box>
-                    <Box>
-                        <FormControl id="email" isRequired />
-                        <FormLabel>Email:</FormLabel>
-                        <Input placeholder="Email" name="email" type="email" focusBorderColor={background} />
-                    </Box>
-                    <Box>
-                        <FormControl id="message" isRequired />
-                        <FormLabel>Votre message:</FormLabel>
-                        <Textarea placeholder="Message" name="message" type="message" focusBorderColor={background} />
-                    </Box>
+        <Flex direction="column">
+            <HeaderComponent />
+            <Stack h="100vh" alignItems="center" justifyContent="center" {...props} fontFamily="Anonymous Pro">
+                <Heading>Contactez-moi</Heading>
+                <form onSubmit={handleSubmit}>
+                    <Box width={["320px", "450px", "600px", "800px"]} mt="40px">
+                        <Box>
+                            <FormControl id="first-name" isRequired />
+                            <FormLabel>Nom:</FormLabel>
+                            <Input placeholder="Nom" name="name" focusBorderColor={background} />
+                        </Box>
+                        <Box>
+                            <FormControl id="email" isRequired />
+                            <FormLabel>Email:</FormLabel>
+                            <Input placeholder="Email" name="email" type="email" focusBorderColor={background} />
+                        </Box>
+                        <Box>
+                            <FormControl id="message" isRequired />
+                            <FormLabel>Votre message:</FormLabel>
+                            <Textarea
+                                placeholder="Message"
+                                name="message"
+                                type="message"
+                                focusBorderColor={background}
+                            />
+                        </Box>
 
-                    <Button type="submit" bg={background} mt="15px">
-                        Envoyer
-                    </Button>
-                </Box>
-            </form>
-        </Stack>
+                        <Button type="submit" bg={background} mt="15px">
+                            Envoyer
+                        </Button>
+                    </Box>
+                </form>
+            </Stack>
+        </Flex>
     );
 };
