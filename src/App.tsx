@@ -7,7 +7,6 @@ import { BrowserRouter } from "react-router-dom";
 
 import { Contact } from "./components/contact";
 import { HomePage } from "./components/HomePage";
-import { NoMatch } from "./components/nomatch";
 
 const queryClient = new QueryClient();
 
