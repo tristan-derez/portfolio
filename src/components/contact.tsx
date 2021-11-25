@@ -7,6 +7,7 @@ import {
     FormControl,
     FormLabel,
     Heading,
+    Image,
     Input,
     Stack,
     Textarea,
@@ -57,16 +58,36 @@ export const Contact = (props) => {
     };
     const background = useColorModeValue("orange.400", "orange.600");
     return (
-        <Flex direction="column">
+        <Flex direction={["column", "column", "column", "row"]}>
             <HeaderComponent />
-            <Stack h="100vh" alignItems="center" justifyContent="center" {...props} fontFamily="Anonymous Pro">
+            <Stack
+                h={["300px", "300px", "400px", "100vh"]}
+                w={["100%", "100%", "100%", "50%"]}
+                alignItems="center"
+                justifyContent="center"
+                {...props}
+            >
+                <Image
+                    mt={["50px", "50px", 0]}
+                    ml={[0, 0, 0, "50px"]}
+                    src="/images/undraw_online_message.svg"
+                    boxSize={["150px", "250px", "400px", "800px"]}
+                />
+            </Stack>
+            <Stack
+                h={["300px", "450px", "450px", "100vh"]}
+                w={["100%", "100%", "100%", "50%"]}
+                fontFamily="Anonymous Pro"
+                alignItems="center"
+                justifyContent="center"
+            >
                 <Heading>Contactez-moi</Heading>
                 <form onSubmit={handleSubmit}>
-                    <Box width={["320px", "450px", "600px", "800px"]} mt="40px">
+                    <Box width={["320px", "450px", "600px", "600px"]}>
                         <Box>
                             <FormControl id="first-name" isRequired />
                             <FormLabel>Nom:</FormLabel>
-                            <Input placeholder="Nom" name="name" focusBorderColor={background} />
+                            <Input placeholder="Nom" name="name" type="text" focusBorderColor={background} />
                         </Box>
                         <Box>
                             <FormControl id="email" isRequired />
