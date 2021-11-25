@@ -46,17 +46,17 @@ export const AboutMeContainer = (props) => {
                 mr={["10px", "10px", "50px"]}
                 ml={["10px", "10px", "50px"]}
                 mt={["20px", "20px", "20px", 0]}
-                w={["auto", "auto", "700px", "800px"]}
+                w={["auto", "auto", "800px", "900px"]}
             >
                 <Heading fontFamily="Permanent Marker" mb="15px" textAlign={["center", "center", "center", "justify"]}>
                     Tristan Derez
                 </Heading>
                 <Text fontFamily="Anonymous Pro" fontSize="20px" textAlign={["left", "left", "left", "justify"]}>
-                    Bonjour ! Suite à l'apprentissage en autodidacte du développement Front-End avec{" "}
+                    Bonjour ! Suite à l'apprentissage en autodidacte du développement Front-End sur
                     <AboutMeLink href="https://codecademy.com" color={textlink}>
                         Codecademy
                     </AboutMeLink>
-                    , je me lance dans une formation{" "}
+                    , je me lance dans une formation
                     <AboutMeLink href="https://openclassrooms.com" color={textlink}>
                         OpenClassrooms
                     </AboutMeLink>{" "}
