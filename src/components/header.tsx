@@ -22,7 +22,7 @@ export const HeaderComponent = () => {
     return (
         <Flex w="100%" pos="fixed" padding="5px" color={useColorModeValue("black", "white")}>
             <Flex>
-                <Link href="#" onClick={() => window.scrollTo(0, 0)}>
+                <Link href="/">
                     <Image src="../../images/logo_tristan.png" boxSize="40px" alt="website logo" />
                 </Link>
             </Flex>
@@ -34,9 +34,9 @@ export const HeaderComponent = () => {
                 fontFamily="Anonymous Pro"
                 display={["none", "none", "flex", "flex"]}
             >
-                <HeaderLink href="#about">A propos</HeaderLink>
-                <HeaderLink href="#projects">Projets</HeaderLink>
-                <HeaderLink href="#contact">Contact</HeaderLink>
+                <HeaderLink href="/#about">A propos</HeaderLink>
+                <HeaderLink href="/#projects">Projets</HeaderLink>
+                <HeaderLink href="/contact">Contact</HeaderLink>
             </HStack>
             <HStack>
                 {/* Hamburger Icon/Open Menu Button */}
@@ -80,7 +80,8 @@ export const HeaderComponent = () => {
                     />
                 </Flex>
                 <Flex flexDir="column" align="center" fontFamily="Anonymous Pro">
-                    <HeaderLink href="#contact" mt="40px">
+                    <HeaderLink href="/">Home</HeaderLink>
+                    <HeaderLink mt="40px" href="/contact">
                         Contact
                     </HeaderLink>
                 </Flex>
