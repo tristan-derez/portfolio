@@ -7,6 +7,7 @@ import { BrowserRouter } from "react-router-dom";
 
 import { Contact } from "./components/contact";
 import { HomePage } from "./components/HomePage";
+import { NoMatch } from "./components/nomatch";
 
 const queryClient = new QueryClient();
 
@@ -21,6 +22,8 @@ function App() {
                         <Routes>
                             <Route path="/" element={<HomePage />} />
                             <Route path="contact" element={<Contact />} />
+                            {/* act like a catch-all route for URLs that have no explicit routes*/}
+                            <Route path="*" element={<NoMatch />} />
                         </Routes>
                     </BrowserRouter>
                 </Flex>
