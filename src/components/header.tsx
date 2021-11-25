@@ -23,7 +23,7 @@ export const HeaderComponent = () => {
         <Flex w="100%" pos="fixed" padding="5px" color={useColorModeValue("black", "white")}>
             <Flex>
                 <Link href="/">
-                    <Image src="../../images/logo_tristan.png" boxSize="40px" alt="website logo" />
+                    <Image src="images/logo_tristan.png" boxSize="40px" alt="website logo" />
                 </Link>
             </Flex>
             <Spacer />
