@@ -6,7 +6,7 @@ import { data } from "../data/data.js";
 
 export const ProjectContainer = () => {
     return (
-        <Spacer minHeight="100vh" w="100%" fontFamily="Anonymous Pro" mt={["100px", "100px", 0]}>
+        <Spacer minHeight="100vh" w="100%" fontFamily="Anonymous Pro" mt={["100px", "100px", 0]} id="projects">
             <Heading>
                 <Center fontFamily="Anonymous Pro">Projets</Center>
             </Heading>
