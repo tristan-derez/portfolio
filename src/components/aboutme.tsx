@@ -46,7 +46,7 @@ export const AboutMeContainer = (props) => {
                 mr={["10px", "10px", "50px"]}
                 ml={["10px", "10px", "50px"]}
                 mt={["20px", "20px", "20px", 0]}
-                w={["auto", "auto", "800px", "900px"]}
+                w={["auto", "auto", "700px", "850px"]}
             >
                 <Heading fontFamily="Permanent Marker" mb="15px" textAlign={["center", "center", "center", "justify"]}>
                     Tristan Derez
