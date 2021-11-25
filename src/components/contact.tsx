@@ -6,56 +6,27 @@ import {
     Flex,
     FormControl,
     FormLabel,
+    HStack,
     Heading,
+    Icon,
     Image,
     Input,
+    Link,
     Stack,
+    Text,
     Textarea,
+    VStack,
     useColorModeValue,
     useToast,
 } from "@chakra-ui/react";
-import React from "react";
-import { useState } from "react";
+import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FiMail } from "react-icons/fi";
+import { IoCheckmarkDoneCircleSharp } from "react-icons/io5";
 
 import { HeaderComponent } from "./header";
 
 export const Contact = (props) => {
-    const [status, setStatus] = useState("Submit");
     const toast = useToast();
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        setStatus("Sending...");
-        const { name, email, message } = e.target.elements;
-        let details = {
-            name: name.value,
-            email: email.value,
-            message: message.value,
-        };
-        let response = await fetch("/api/contact", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json;charset=utf-8",
-            },
-            body: JSON.stringify(details),
-        });
-        console.log(response);
-        if (response.status === 200) {
-            setStatus("Submit");
-            let result = await response.json();
-            toast({
-                title: result.status,
-                status: "success",
-                duration: 9000,
-                isClosable: true,
-            });
-        } else
-            toast({
-                title: "Une erreur est survenue",
-                status: "warning",
-                duration: 9000,
-                isClosable: true,
-            });
-    };
     const background = useColorModeValue("orange.400", "orange.600");
     return (
         <Flex direction={["column", "column", "column", "row"]}>
@@ -81,36 +52,56 @@ export const Contact = (props) => {
                 alignItems="center"
                 justifyContent="center"
             >
-                <Heading>Contactez-moi</Heading>
-                <form onSubmit={handleSubmit}>
-                    <Box width={["320px", "450px", "600px", "600px"]}>
-                        <Box>
-                            <FormControl id="first-name" isRequired />
-                            <FormLabel>Nom:</FormLabel>
-                            <Input placeholder="Nom" name="name" type="text" focusBorderColor={background} />
-                        </Box>
-                        <Box>
-                            <FormControl id="email" isRequired />
-                            <FormLabel>Email:</FormLabel>
-                            <Input placeholder="Email" name="email" type="email" focusBorderColor={background} />
-                        </Box>
-                        <Box>
-                            <FormControl id="message" isRequired />
-                            <FormLabel>Votre message:</FormLabel>
-                            <Textarea
-                                placeholder="Message"
-                                name="message"
-                                type="message"
-                                focusBorderColor={background}
-                            />
-                        </Box>
-
-                        <Button type="submit" bg={background} mt="15px">
-                            Envoyer
-                        </Button>
-                    </Box>
-                </form>
+                <Heading mb="50px">Contactez-moi</Heading>
+                <CustomToast />
+                <Text>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</Text>
+                <Flex direction={["column", "column", "column", "row"]}>
+                    <HStack mt="50px" alignItems="center" justifyContent="center" w="300px">
+                        <Link>
+                            <Icon as={FaLinkedin} w={8} h={8} />
+                        </Link>
+                        <Link>
+                            <Icon as={FaGithub} w={8} h={8} />
+                        </Link>
+                        <Link>
+                            <Icon as={FaTwitter} w={8} h={8} />
+                        </Link>
+                        <Link>
+                            <Icon as={FiMail} w={8} h={8} />
+                        </Link>
+                    </HStack>
+                </Flex>
             </Stack>
         </Flex>
     );
 };
+const mail = "tristan.derez@gmail.com";
+
+function CustomToast() {
+    const toast = useToast();
+    return (
+        <Button
+            id="copy"
+            mt="50px"
+            onClick={() => {
+                navigator.clipboard.writeText(mail);
+                toast({
+                    position: "bottom-right",
+                    render: () => (
+                        <Button color="white" padding={6} bg="#4BB543" margin="10px">
+                            Copié dans le presse-papier &nbsp;
+                            <Icon as={IoCheckmarkDoneCircleSharp} />
+                        </Button>
+                    ),
+                    isClosable: true,
+                });
+            }}
+            _active={{
+                transform: "scale(0.98)",
+                borderColor: "orange.600",
+            }}
+        >
+            {mail}
+        </Button>
+    );
+}
