@@ -2,12 +2,12 @@ import "./App.css";
 
 import { ChakraProvider, Flex, extendTheme } from "@chakra-ui/react";
 import { QueryClient, QueryClientProvider } from "react-query";
-import { Link, Route } from "react-router-dom";
+import { Link, Route, Routes } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 
-import { AboutMeContainer } from "./components/aboutme";
 import { Contact } from "./components/contact";
-import { HeaderComponent } from "./components/header";
-import { ProjectContainer } from "./components/projects";
+import { HomePage } from "./components/HomePage";
+import { NoMatch } from "./components/nomatch";
 
 const queryClient = new QueryClient();
 
@@ -18,10 +18,12 @@ function App() {
         <QueryClientProvider client={queryClient}>
             <ChakraProvider theme={theme}>
                 <Flex direction="column">
-                    <HeaderComponent />
-                    <AboutMeContainer />
-                    <ProjectContainer />
-                    <Contact />
+                    <BrowserRouter>
+                        <Routes>
+                            <Route path="/" element={<HomePage />} />
+                            <Route path="contact" element={<Contact />} />
+                        </Routes>
+                    </BrowserRouter>
                 </Flex>
             </ChakraProvider>
         </QueryClientProvider>
