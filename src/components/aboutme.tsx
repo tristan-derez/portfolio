@@ -31,6 +31,7 @@ export const AboutMeContainer = (props) => {
             justifyContent="center"
             mt={["75px", "75px", 0]}
             {...props}
+            id="about"
         >
             <Image
                 borderRadius="full"
