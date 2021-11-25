@@ -57,16 +57,16 @@ export const Contact = (props) => {
                 <Text>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</Text>
                 <Flex direction={["column", "column", "column", "row"]}>
                     <HStack mt="50px" alignItems="center" justifyContent="center" w="300px">
-                        <Link>
+                        <Link href="https://www.linkedin.com/in/tristan-derez/" isExternal>
                             <Icon as={FaLinkedin} w={8} h={8} />
                         </Link>
-                        <Link>
+                        <Link href="https://github.com/dreyzu" isExternal>
                             <Icon as={FaGithub} w={8} h={8} />
                         </Link>
-                        <Link>
+                        <Link href="https://www.twitter.com/doreizu" isExternal>
                             <Icon as={FaTwitter} w={8} h={8} />
                         </Link>
-                        <Link>
+                        <Link href="mailto:tristan.derez@gmail.com" isExternal>
                             <Icon as={FiMail} w={8} h={8} />
                         </Link>
                     </HStack>
@@ -75,6 +75,7 @@ export const Contact = (props) => {
         </Flex>
     );
 };
+
 const mail = "tristan.derez@gmail.com";
 
 function CustomToast() {
