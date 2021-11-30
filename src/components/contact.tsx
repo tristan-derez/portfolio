@@ -39,9 +39,9 @@ export const Contact = (props) => {
                 {...props}
             >
                 <Image
-                    mt={["50px", "50px", 0]}
+                    mt={["50px", "50px", "50px", 0]}
                     ml={[0, 0, 0, "50px"]}
-                    src="/images/undraw_online_message.svg"
+                    src="/images/undraw_opinion.svg"
                     boxSize={["150px", "250px", "400px", "800px"]}
                 />
             </Stack>
