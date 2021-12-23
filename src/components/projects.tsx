@@ -24,7 +24,7 @@ const ProjectItem = ({ data }) => {
         <Link href={data.adress}>
             <WrapItem borderWidth="1px" borderRadius="lg" overflow="hidden">
                 <Center flexDirection="column" width={{ base: "300px", md: "350px", lg: "600px" }} minWidth="300px">
-                    <Image src={data.imageUrl} alt={data.imageAlt} />
+                    <Image src={data.imageUrl} alt={data.imageAlt} minHeight="337px" />
                     <Box d="flex" alignItems="baseline">
                         <Box
                             color="gray.500"
