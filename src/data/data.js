@@ -17,7 +17,7 @@ export const data = [
         adress: "https://podrequest.vercel.app/",
     },
     {
-        imageUrl: "https://i.ibb.co/zQwp4BB/Capture-d-cran-2021-12-23-142501.png",
+        imageUrl: "https://i.ibb.co/j8XpGvR/Devfinder.png",
         imageAlt: "Website's screenshot",
         stackUsed: "React, Chakra-ui",
         title: "Devfinder",
