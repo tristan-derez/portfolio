@@ -1,3 +1,5 @@
+import "../app.css";
+
 import { Flex } from "@chakra-ui/react";
 
 import { AboutMeContainer } from "./aboutme";

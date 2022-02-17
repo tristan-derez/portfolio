@@ -100,7 +100,7 @@ const HeaderLink = ({ children, ...props }) => {
     return (
         <chakra.a
             padding="10px"
-            cursor="pointer"
+            cursor="none"
             _hover={{
                 backgroundImage: "url('/images/trace-peinture-orange.png')",
                 backgroundSize: "cover",

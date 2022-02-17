@@ -2,3 +2,34 @@ html {
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
+
+html,
+body,
+* {
+    cursor: none;
+}
+
+.cursor-dot,
+.cursor-dot-outline {
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.cursor-dot {
+    width: 1px;
+    height: 1px;
+    background-color: black;
+}
+
+.cursor-dot-outline {
+    width: 80px;
+    height: 80px;
+    background-color: transparent;
+    border: 1px double black;
+}

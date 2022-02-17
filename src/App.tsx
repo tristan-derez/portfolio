@@ -6,6 +6,7 @@ import { Link, Route, Routes } from "react-router-dom";
 import { BrowserRouter } from "react-router-dom";
 
 import { Contact } from "./components/contact";
+import { Cursor } from "./components/Cursor";
 import { HomePage } from "./components/HomePage";
 import { NoMatch } from "./components/nomatch";
 
@@ -26,6 +27,7 @@ function App() {
                             <Route path="*" element={<NoMatch />} />
                         </Routes>
                     </BrowserRouter>
+                    <Cursor />
                 </Flex>
             </ChakraProvider>
         </QueryClientProvider>
