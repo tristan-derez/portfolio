@@ -1,5 +1,3 @@
-import "@fontsource/anonymous-pro";
-
 import { Box, Flex, Heading, Image, Text, chakra, useColorModeValue } from "@chakra-ui/react";
 
 export const AboutMeContainer = ({ ...props }) => {
