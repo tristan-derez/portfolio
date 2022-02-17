@@ -1,5 +1,3 @@
-import "@fontsource/anonymous-pro";
-
 import {
     Button,
     Flex,
@@ -42,7 +40,7 @@ export const Contact = (props: any) => {
             <Stack
                 h={["300px", "450px", "450px", "100vh"]}
                 w={["100%", "100%", "100%", "50%"]}
-                fontFamily="Anonymous Pro"
+                fontFamily="Zen Kaku Gothic Antique"
                 alignItems="center"
                 justifyContent="center"
             >

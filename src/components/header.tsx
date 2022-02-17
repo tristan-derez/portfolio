@@ -1,6 +1,3 @@
-import "@fontsource/permanent-marker";
-import "@fontsource/anonymous-pro";
-
 import { CloseIcon, HamburgerIcon } from "@chakra-ui/icons";
 import {
     Flex,
@@ -37,7 +34,7 @@ export const HeaderComponent = () => {
                 mr="20px"
                 spacing="20px"
                 fontSize="16px"
-                fontFamily="Anonymous Pro"
+                fontFamily="Zen Kaku Gothic Antique"
                 display={["none", "none", "flex", "flex"]}
             >
                 <HeaderLink href="/#about">A propos</HeaderLink>
@@ -85,7 +82,7 @@ export const HeaderComponent = () => {
                         bg="none"
                     />
                 </Flex>
-                <Flex flexDir="column" align="center" fontFamily="Anonymous Pro">
+                <Flex flexDir="column" align="center" fontFamily="Zen Kaku Gothic Antique">
                     <HeaderLink href="/">Home</HeaderLink>
                     <HeaderLink mt="40px" href="/contact">
                         Contact

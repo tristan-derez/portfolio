@@ -1,16 +1,20 @@
-import "@fontsource/anonymous-pro";
-
 import { Box, Center, Heading, Image, Link, Spacer, Wrap, WrapItem } from "@chakra-ui/react";
 
 import { data } from "../data/data.js";
 
 export const ProjectContainer = () => {
     return (
-        <Spacer minHeight="100vh" w="100%" fontFamily="Anonymous Pro" mt={["100px", "100px", 0]} id="projects">
-            <Heading>
-                <Center fontFamily="Anonymous Pro">Projets</Center>
+        <Spacer
+            minHeight="100vh"
+            w="100%"
+            fontFamily="Zen Kaku Gothic Antique"
+            mt={["100px", "100px", 0]}
+            id="projects"
+        >
+            <Heading as="h2" fontFamily="Kirang Haerang" fontSize="100px">
+                <Center>Projets</Center>
             </Heading>
-            <Wrap spacing="40px" margin="30px" justify="center">
+            <Wrap spacing="40px" justify="center" margin="50px">
                 {data.map((data, index) => (
                     <ProjectItem key={index} data={data} />
                 ))}

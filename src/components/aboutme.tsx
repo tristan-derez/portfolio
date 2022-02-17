@@ -1,4 +1,3 @@
-import "@fontsource/permanent-marker";
 import "@fontsource/anonymous-pro";
 
 import { Box, Flex, Heading, Image, Text, chakra, useColorModeValue } from "@chakra-ui/react";
@@ -32,11 +31,22 @@ export const AboutMeContainer = ({ ...props }) => {
                 mt={["20px", "20px", "20px", 0]}
                 w={["auto", "auto", "700px", "850px"]}
             >
-                <Heading fontFamily="Permanent Marker" mb="15px" textAlign={["center", "center", "center", "justify"]}>
+                <Heading
+                    as="h1"
+                    fontFamily="Kirang Haerang"
+                    fontSize="50px"
+                    textAlign={["center", "center", "center", "justify"]}
+                >
                     Tristan Derez
                 </Heading>
-                <Text fontFamily="Anonymous Pro" fontSize="20px" textAlign={["left", "left", "left", "justify"]}>
-                    Bonjour ! Suite à l'apprentissage en autodidacte du développement Front-End sur
+                <Text
+                    fontFamily="Zen Kaku Gothic Antique"
+                    fontSize="20px"
+                    textAlign={["left", "left", "left", "justify"]}
+                    mt="15px"
+                >
+                    Bonjour ! <br />
+                    Suite à l'apprentissage en autodidacte du développement Front-End sur
                     <AboutMeLink href="https://codecademy.com" color={textlink}>
                         Codecademy
                     </AboutMeLink>
