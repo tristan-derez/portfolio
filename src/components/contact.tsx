@@ -44,7 +44,9 @@ export const Contact = (props: any) => {
                 alignItems="center"
                 justifyContent="center"
             >
-                <Heading mb="50px">Contactez-moi</Heading>
+                <Heading mb="50px" fontFamily="Kirang Haerang">
+                    Contactez-moi
+                </Heading>
                 <CustomToast />
                 <Text>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</Text>
                 <Flex direction={["column", "column", "column", "row"]}>
