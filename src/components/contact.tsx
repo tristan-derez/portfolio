@@ -1,21 +1,15 @@
 import "@fontsource/anonymous-pro";
 
 import {
-    Box,
     Button,
     Flex,
-    FormControl,
-    FormLabel,
     HStack,
     Heading,
     Icon,
     Image,
-    Input,
     Link,
     Stack,
     Text,
-    Textarea,
-    VStack,
     useColorModeValue,
     useToast,
 } from "@chakra-ui/react";
@@ -25,7 +19,7 @@ import { IoCheckmarkDoneCircleSharp } from "react-icons/io5";
 
 import { HeaderComponent } from "./header";
 
-export const Contact = (props) => {
+export const Contact = (props: any) => {
     const toast = useToast();
     const background = useColorModeValue("orange.400", "orange.600");
     return (

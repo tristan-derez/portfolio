@@ -1,4 +1,4 @@
-import { Flex, HStack, Heading, Link } from "@chakra-ui/react";
+import { Flex, HStack, Link } from "@chakra-ui/react";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 export const FooterComponent = () => {

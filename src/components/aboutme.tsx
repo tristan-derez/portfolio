@@ -1,25 +1,9 @@
 import "@fontsource/permanent-marker";
 import "@fontsource/anonymous-pro";
 
-import {
-    Box,
-    Button,
-    Center,
-    Flex,
-    Heading,
-    IconButton,
-    Image,
-    Link,
-    Spacer,
-    Stack,
-    Text,
-    chakra,
-    useColorMode,
-    useColorModeValue,
-} from "@chakra-ui/react";
+import { Box, Flex, Heading, Image, Text, chakra, useColorModeValue } from "@chakra-ui/react";
 
-export const AboutMeContainer = (props) => {
-    const { toggleColorMode, colorMode } = useColorMode();
+export const AboutMeContainer = (props: any) => {
     const textlink = useColorModeValue("orange.400", "orange.600");
     return (
         <Flex

@@ -1,6 +1,6 @@
 import "@fontsource/anonymous-pro";
 
-import { Box, Center, Heading, Image, Link, Spacer, Text, Wrap, WrapItem } from "@chakra-ui/react";
+import { Box, Center, Heading, Image, Link, Spacer, Wrap, WrapItem } from "@chakra-ui/react";
 
 import { data } from "../data/data.js";
 
