@@ -9,7 +9,7 @@
         "strict": false,
         "forceConsistentCasingInFileNames": true,
         "module": "ESNext",
-        "moduleResolution": "Node",
+        "moduleResolution": "node",
         "resolveJsonModule": true,
         "isolatedModules": true,
         "noEmit": true,
@@ -21,5 +21,5 @@
             "/assets/*": ["../public/assets/*"]
         }
     },
-    "include": ["./src"]
+    "include": ["src/**/*.ts", "tests/**/*.ts"]
 }
