@@ -15,7 +15,7 @@ import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { FiMail } from "react-icons/fi";
 import { IoCheckmarkDoneCircleSharp } from "react-icons/io5";
 
-import { HeaderComponent } from "./header";
+import { HeaderComponent } from "./Header";
 
 export const Contact = (props: any) => {
     const toast = useToast();
@@ -83,7 +83,13 @@ function CustomToast() {
                 toast({
                     position: "bottom-right",
                     render: () => (
-                        <Button color="white" padding={6} bg="#4BB543" margin="10px">
+                        <Button
+                            color="white"
+                            padding={6}
+                            bg="#4BB543"
+                            margin="10px"
+                            fontFamily="Zen Kaku Gothic Antique"
+                        >
                             Copié dans le presse-papier &nbsp;
                             <Icon as={IoCheckmarkDoneCircleSharp} />
                         </Button>
