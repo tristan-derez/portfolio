@@ -6,7 +6,6 @@ export const AboutMeContainer = ({ ...props }) => {
         <Flex
             minHeight="100vh"
             w="100vw"
-            spacing="25px"
             flexDirection={["column", "column", "column", "row"]}
             alignItems="center"
             justifyContent="center"
