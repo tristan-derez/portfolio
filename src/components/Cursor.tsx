@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 
 export const Cursor = () => {
-    const delay = 18;
+    const delay = 15;
     const cursorVisible = useRef(true);
     const cursorEnlarged = useRef(true);
 
@@ -37,20 +37,16 @@ export const Cursor = () => {
 
     const toggleCursorVisibility = () => {
         if (cursorVisible.current) {
-            dot.current.style.opacity = 1;
             dotOutline.current.style.opacity = 1;
         } else {
-            dot.current.style.opacity = 0;
             dotOutline.current.style.opacity = 0;
         }
     };
 
     const toggleCursorSize = () => {
         if (cursorEnlarged.current) {
-            dot.current.style.transform = "translate(-50%, -50%) scale(0.75)";
             dotOutline.current.style.transform = "translate(-50%, -50%) scale(2)";
         } else {
-            dot.current.style.transform = "translate(-50%, -50%) scale(1)";
             dotOutline.current.style.transform = "translate(-50%, -50%) scale(1)";
         }
     };
@@ -81,9 +77,6 @@ export const Cursor = () => {
 
         endX.current = e.pageX;
         endY.current = e.pageY;
-
-        dot.current.style.top = endY.current + "px";
-        dot.current.style.left = endX.current + "px";
     };
 
     const animateDotOutline = () => {

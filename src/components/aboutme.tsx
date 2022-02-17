@@ -56,7 +56,7 @@ export const AboutMeContainer = (props: any) => {
 const AboutMeLink = ({ children, ...props }) => {
     return (
         <chakra.a
-            cursor="none"
+            cursor="pointer"
             padding="8px"
             _hover={{
                 backgroundImage: "url('/images/trace-peinture-orange.png')",
