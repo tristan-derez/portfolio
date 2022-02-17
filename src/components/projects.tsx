@@ -14,7 +14,7 @@ export const ProjectContainer = () => {
             <Heading as="h2" fontFamily="Kirang Haerang" fontSize="100px">
                 <Center>Projets</Center>
             </Heading>
-            <Wrap spacing="40px" justify="center" margin="50px">
+            <Wrap spacing="40px" justify="center" mt="40px" ml="20px">
                 {data.map((data, index) => (
                     <ProjectItem key={index} data={data} />
                 ))}
