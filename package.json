@@ -14,7 +14,7 @@
         "@emotion/styled": "^11",
         "@fontsource/anonymous-pro": "^4.5.0",
         "@fontsource/permanent-marker": "^4.5.0",
-        "@pastable/core": "^0.1.9",
+        "@pastable/core": "^0.1.19",
         "@xstate/react": "^1.5.1",
         "axios": "^0.21.1",
         "dotenv": "^10.0.0",
