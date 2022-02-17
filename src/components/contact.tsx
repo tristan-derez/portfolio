@@ -15,7 +15,7 @@ import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { FiMail } from "react-icons/fi";
 import { IoCheckmarkDoneCircleSharp } from "react-icons/io5";
 
-import { HeaderComponent } from "./header";
+import { HeaderComponent } from "./Header";
 
 export const Contact = (props: any) => {
     const toast = useToast();
