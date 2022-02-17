@@ -2,10 +2,10 @@ import "../App.css";
 
 import { Flex } from "@chakra-ui/react";
 
-import { AboutMeContainer } from "./AboutMe";
-import { FooterComponent } from "./Footer";
-import { HeaderComponent } from "./Header";
-import { ProjectContainer } from "./Projects";
+import { AboutMeContainer } from "./AboutMeComponent";
+import { FooterComponent } from "./FooterComponent";
+import { HeaderComponent } from "./HeaderComponent";
+import { ProjectContainer } from "./ProjectsComponent";
 
 export const HomePage = () => {
     return (

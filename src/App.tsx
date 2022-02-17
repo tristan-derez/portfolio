@@ -5,7 +5,7 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import { Link, Route, Routes } from "react-router-dom";
 import { BrowserRouter } from "react-router-dom";
 
-import { Contact } from "./components/Contact";
+import { Contact } from "./components/ContactComponent";
 import { Cursor } from "./components/Cursor";
 import { NoMatch } from "./components/Error";
 import { HomePage } from "./components/HomePage";
