@@ -1,13 +1,19 @@
-import reactRefresh from "@vitejs/plugin-react-refresh";
+import react from "@vitejs/plugin-react";
+import jotaiDebugLabel from "jotai/babel/plugin-debug-label";
+import jotaiReactRefresh from "jotai/babel/plugin-react-refresh";
 import { defineConfig } from "vite";
 import { VitePWA } from "vite-plugin-pwa";
-import reactJsx from "vite-react-jsx";
 
 // https://vitejs.dev/config/
 export default defineConfig({
     base: "/",
     root: "./",
-    plugins: [reactRefresh(), reactJsx(), VitePWA()],
+    build: { outDir: "./dist", sourcemap: true },
+    plugins: [
+        // https://jotai.org/docs/guides/vite
+        react({ babel: { plugins: [jotaiDebugLabel, jotaiReactRefresh] } }),
+        VitePWA(),
+    ],
     resolve: {
         alias: [
             {
