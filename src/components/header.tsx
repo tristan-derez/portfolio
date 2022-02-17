@@ -16,7 +16,7 @@ import {
 import { useState } from "react";
 import { IoMdMoon, IoMdSunny } from "react-icons/io";
 
-export const HeaderComponent = ({ mouseOverEvent, mouseOutEvent, src }) => {
+export const HeaderComponent = () => {
     const { toggleColorMode, colorMode } = useColorMode();
     let [display, changeDisplay] = useState("none");
     return (
@@ -40,15 +40,9 @@ export const HeaderComponent = ({ mouseOverEvent, mouseOutEvent, src }) => {
                 fontFamily="Anonymous Pro"
                 display={["none", "none", "flex", "flex"]}
             >
-                <HeaderLink href="/#about" onMouseOut={mouseOutEvent} onMouseOver={mouseOverEvent} src={src}>
-                    A propos
-                </HeaderLink>
-                <HeaderLink href="/#projects" onMouseOut={mouseOutEvent} onMouseOver={mouseOverEvent} src={src}>
-                    Projets
-                </HeaderLink>
-                <HeaderLink href="/contact" onMouseOut={mouseOutEvent} onMouseOver={mouseOverEvent} src={src}>
-                    Contact
-                </HeaderLink>
+                <HeaderLink href="/#about">A propos</HeaderLink>
+                <HeaderLink href="/#projects">Projets</HeaderLink>
+                <HeaderLink href="/contact">Contact</HeaderLink>
             </HStack>
             <HStack>
                 {/* Hamburger Icon/Open Menu Button */}

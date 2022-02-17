@@ -3,7 +3,7 @@ import "@fontsource/anonymous-pro";
 
 import { Box, Flex, Heading, Image, Text, chakra, useColorModeValue } from "@chakra-ui/react";
 
-export const AboutMeContainer = ({ mouseOverEvent, mouseOutEvent, src, ...props }) => {
+export const AboutMeContainer = ({ ...props }) => {
     const textlink = useColorModeValue("orange.400", "orange.600");
     return (
         <Flex
@@ -37,23 +37,11 @@ export const AboutMeContainer = ({ mouseOverEvent, mouseOutEvent, src, ...props 
                 </Heading>
                 <Text fontFamily="Anonymous Pro" fontSize="20px" textAlign={["left", "left", "left", "justify"]}>
                     Bonjour ! Suite à l'apprentissage en autodidacte du développement Front-End sur
-                    <AboutMeLink
-                        href="https://codecademy.com"
-                        color={textlink}
-                        onMouseOut={mouseOutEvent}
-                        onMouseOver={mouseOverEvent}
-                        src={src}
-                    >
+                    <AboutMeLink href="https://codecademy.com" color={textlink}>
                         Codecademy
                     </AboutMeLink>
                     , je me lance dans une formation
-                    <AboutMeLink
-                        href="https://openclassrooms.com"
-                        color={textlink}
-                        onMouseOut={mouseOutEvent}
-                        onMouseOver={mouseOverEvent}
-                        src={src}
-                    >
+                    <AboutMeLink href="https://openclassrooms.com" color={textlink}>
                         OpenClassrooms
                     </AboutMeLink>{" "}
                     en alternance pour consolider et faire certifier mes connaissances.

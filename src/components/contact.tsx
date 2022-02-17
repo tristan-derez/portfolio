@@ -24,7 +24,7 @@ export const Contact = (props: any) => {
     const background = useColorModeValue("orange.400", "orange.600");
     return (
         <Flex direction={["column", "column", "column", "row"]}>
-            <HeaderComponent mouseOverEvent={undefined} mouseOutEvent={undefined} src={undefined} />
+            <HeaderComponent />
             <Stack
                 h={["300px", "300px", "400px", "100vh"]}
                 w={["100%", "100%", "100%", "50%"]}
