@@ -41,6 +41,7 @@ export const AboutMeContainer = ({ ...props }) => {
                     fontSize="20px"
                     textAlign={["left", "left", "left", "justify"]}
                     mt="15px"
+                    marginX="10px"
                 >
                     Bonjour ! <br />
                     Suite à l'apprentissage en autodidacte du développement Front-End sur
