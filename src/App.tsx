@@ -5,10 +5,10 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import { Link, Route, Routes } from "react-router-dom";
 import { BrowserRouter } from "react-router-dom";
 
-import { Contact } from "./components/contact";
+import { Contact } from "./components/Contact";
 import { Cursor } from "./components/Cursor";
+import { NoMatch } from "./components/Error";
 import { HomePage } from "./components/HomePage";
-import { NoMatch } from "./components/nomatch";
 
 const queryClient = new QueryClient();
 
