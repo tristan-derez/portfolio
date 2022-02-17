@@ -1,6 +1,5 @@
 import "./index.css";
 import "@fontsource/zen-kaku-gothic-antique";
-import "@fontsource/permanent-marker";
 import "@fontsource/kirang-haerang";
 
 import React from "react";
