@@ -22,7 +22,6 @@ export const AboutMeContainer = ({ ...props }) => {
                 ml={[0, 0, 0, "50px"]}
             />
             <Box
-                fontSize="50px"
                 mr={["10px", "10px", "50px"]}
                 ml={["10px", "10px", "50px"]}
                 mt={["20px", "20px", "20px", 0]}
