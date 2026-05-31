@@ -1,0 +1,25 @@
+import { defineCollection, defineConfig } from '@content-collections/core'
+import { z } from 'zod'
+
+const projects = defineCollection({
+  name: 'projects',
+  directory: 'content/projects',
+  include: '**/*.md',
+  schema: z.object({
+    title: z.string(),
+    desc: z.string(),
+    date: z.string(),
+    tags: z.array(z.string()),
+    content: z.string(),
+  }),
+  transform(doc) {
+    const path = doc._meta.path.replace(/\\/g, "/");
+    const locale = path.split("/")[0];
+    const slug = path.split("/")[1];
+    return { ...doc, locale, slug };
+  },
+})
+
+export default defineConfig({
+  collections: [projects],
+})
