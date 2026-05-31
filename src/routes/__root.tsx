@@ -63,7 +63,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
 			</head>
 			<ThemeProvider defaultTheme="system" storageKey="vite-ui-theme">
 				<TooltipProvider>
-					<body className="antialiased flex flex-col min-h-svh max-w-2xl mx-auto px-2.5 md:px-0">
+					<body className="antialiased flex flex-col min-h-svh max-w-lg mx-auto px-2.5 md:px-0">
 						<Header />
 						<main className="w-full">{children}</main>
 						<Scripts />
