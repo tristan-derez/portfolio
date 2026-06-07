@@ -16,7 +16,7 @@ export function RecentProjects({ projects }: RecentProjectsProps) {
 		<section className="flex flex-col w-full gap-3">
 			<h2 className="font-heading font-bold text-xl">
 				{m.projects_title()}
-				<span className="from-neutral-700">({recentProjects.length})</span>
+				<span className="from-neutral-700"> ({recentProjects.length})</span>
 			</h2>
 			{recentProjects.map((project) => (
 				<Link
