@@ -11,6 +11,7 @@ const projects = defineCollection({
     desc: z.string(),
     date: z.string(),
     tags: z.array(z.string()),
+    content: z.string()
   }),
  transform: async (doc) => {
     const path = doc._meta.path.replace(/\\/g, "/");
