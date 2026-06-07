@@ -1,14 +1,14 @@
 import { Link } from "@tanstack/react-router";
-import type { Project } from "content-collections";
+import { allProjects } from "content-collections";
 import { m } from "#/paraglide/messages";
+import { getLocale } from "#/paraglide/runtime";
 import { Card, CardDescription, CardHeader, CardTitle } from "../ui/card";
 
-interface RecentProjectsProps {
-	projects: Project[];
-}
+export function RecentProjects() {
+	const locale = getLocale();
 
-export function RecentProjects({ projects }: RecentProjectsProps) {
-	const recentProjects = [...projects]
+	const recentProjects = allProjects
+		.filter((p) => p.locale === locale)
 		.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
 		.slice(0, 3);
 

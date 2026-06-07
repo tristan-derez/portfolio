@@ -10,15 +10,12 @@ import {
 import { getLocale } from "#/paraglide/runtime";
 
 export const Route = createFileRoute("/projects/")({
-	loader() {
-		const locale = getLocale();
-		return allProjects.filter((p) => p.locale === locale);
-	},
 	component: ProjectsIndex,
 });
 
 function ProjectsIndex() {
-	const projects = Route.useLoaderData();
+	const locale = getLocale();
+	const projects = allProjects.filter((p) => p.locale === locale);
 
 	return (
 		<div className="flex flex-col gap-2 max-w-2xl mx-auto w-full pt-12">

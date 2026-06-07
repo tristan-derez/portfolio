@@ -1,4 +1,3 @@
-import { CircleNotchIcon } from "@phosphor-icons/react";
 import { Link } from "@tanstack/react-router";
 import parse, {
 	type DOMNode,
@@ -6,29 +5,13 @@ import parse, {
 	Element,
 	type HTMLReactParserOptions,
 } from "html-react-parser";
-import { useEffect, useState } from "react";
-import { type MarkdownResult, renderMarkdown } from "#/lib/markdown";
 
 type MarkdownProps = {
-	content: string;
+	markup: string;
 	className?: string;
 };
 
-export function Markdown({ content, className }: MarkdownProps) {
-	const [result, setResult] = useState<MarkdownResult | null>(null);
-
-	useEffect(() => {
-		renderMarkdown(content).then(setResult);
-	}, [content]);
-
-	if (!result) {
-		return (
-			<div className="flex items-center justify-center min-h-40 text-amber-500">
-				<CircleNotchIcon size={32} className="animate-spin" />
-			</div>
-		);
-	}
-
+export function Markdown({ markup, className }: MarkdownProps) {
 	const options: HTMLReactParserOptions = {
 		replace: (domNode) => {
 			if (domNode instanceof Element) {
@@ -42,7 +25,6 @@ export function Markdown({ content, className }: MarkdownProps) {
 						);
 					}
 				}
-
 				if (domNode.name === "img") {
 					return (
 						<img
@@ -57,5 +39,5 @@ export function Markdown({ content, className }: MarkdownProps) {
 		},
 	};
 
-	return <div className={className}>{parse(result.markup, options)}</div>;
+	return <div className={className}>{parse(markup, options)}</div>;
 }

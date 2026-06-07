@@ -1,3 +1,4 @@
+import { renderMarkdown } from '#/lib/markdown';
 import { defineCollection, defineConfig } from '@content-collections/core'
 import { z } from 'zod'
 
@@ -10,14 +11,14 @@ const projects = defineCollection({
     desc: z.string(),
     date: z.string(),
     tags: z.array(z.string()),
-    content: z.string(),
   }),
-  transform(doc) {
+ transform: async (doc) => {
     const path = doc._meta.path.replace(/\\/g, "/");
     const locale = path.split("/")[0];
     const slug = path.split("/")[1];
-    return { ...doc, locale, slug };
-  },
+    const { markup, headings } = await renderMarkdown(doc.content);
+    return { ...doc, locale, slug, markup, headings };
+},
 })
 
 export default defineConfig({
