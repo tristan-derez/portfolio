@@ -10,30 +10,18 @@ import { m } from "#/paraglide/messages";
 import { useTheme } from "./use-theme";
 
 export function ThemeSwitcher() {
-	const { theme, setTheme } = useTheme();
-
-	const effectiveTheme: "light" | "dark" =
-		theme === "system"
-			? typeof window !== "undefined" &&
-				window.matchMedia("(prefers-color-scheme: light)").matches
-				? "light"
-				: "dark"
-			: theme;
+	const { appTheme, setTheme } = useTheme();
 
 	const toggleTheme = () => {
-		if (typeof window === "undefined") return;
-
-		const apply = () => setTheme(effectiveTheme === "light" ? "dark" : "light");
-
-		if (!document.startViewTransition) {
-			apply();
-			return;
+		const next = appTheme === "light" ? "dark" : "light";
+		if (typeof document !== "undefined" && "startViewTransition" in document) {
+			document.startViewTransition(() => setTheme(next));
+		} else {
+			setTheme(next);
 		}
-
-		document.startViewTransition(apply);
 	};
 
-	const isLight = effectiveTheme === "light";
+	const isLight = appTheme === "light";
 	const tooltipLabel = isLight ? m.switch_to_dark() : m.switch_to_light();
 
 	return (
@@ -44,18 +32,23 @@ export function ThemeSwitcher() {
 						<Button
 							variant="ghost"
 							size="icon-lg"
-							aria-label={tooltipLabel}
 							onClick={toggleTheme}
+							aria-label={tooltipLabel}
 							suppressHydrationWarning
 						/>
 					}
 					suppressHydrationWarning
 				>
-					{isLight ? (
-						<SunIcon size={32} weight="bold" suppressHydrationWarning />
-					) : (
-						<MoonIcon size={32} weight="bold" suppressHydrationWarning />
-					)}
+					<SunIcon
+						className="theme-icon theme-icon-light"
+						size={32}
+						weight="bold"
+					/>
+					<MoonIcon
+						className="theme-icon theme-icon-dark"
+						size={32}
+						weight="bold"
+					/>
 				</TooltipTrigger>
 				<TooltipContent side="bottom" suppressHydrationWarning>
 					{tooltipLabel}

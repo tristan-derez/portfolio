@@ -9,11 +9,6 @@ import { TooltipProvider } from "#/components/ui/tooltip";
 import { initHighlighter } from "#/lib/markdown";
 
 export const Route = createRootRoute({
-	beforeLoad: async () => {
-		if (typeof document !== "undefined") {
-			document.documentElement.setAttribute("lang", getLocale());
-		}
-	},
 	loader: () => {
 		initHighlighter();
 	},
@@ -41,12 +36,19 @@ export const Route = createRootRoute({
 		{
 			children: `
       (function() {
-        const stored = localStorage.getItem('vite-ui-theme');
-        const preferred = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-        const resolved = stored === 'dark' || stored === 'light' ? stored
-          : stored === 'system' || !stored ? preferred
-          : preferred;
-	document.documentElement.classList.add(resolved);
+        try {
+          const stored = localStorage.getItem('vite-ui-theme');
+          const valid = ['light', 'dark', 'system'].includes(stored) ? stored : 'system';
+          if (valid === 'system') {
+            const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            document.documentElement.classList.add(systemTheme, 'system');
+          } else {
+            document.documentElement.classList.add(valid);
+          }
+        } catch (e) {
+          const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+          document.documentElement.classList.add(systemTheme, 'system');
+        }
       })()
     `,
 		},
@@ -61,7 +63,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
 			<head>
 				<HeadContent />
 			</head>
-			<ThemeProvider defaultTheme="system" storageKey="vite-ui-theme">
+			<ThemeProvider>
 				<TooltipProvider>
 					<body className="antialiased flex flex-col min-h-svh max-w-lg mx-auto px-2.5 md:px-0">
 						<Header />

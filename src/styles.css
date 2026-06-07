@@ -70,6 +70,15 @@
     }
 }
 
+@font-face {
+  font-family: 'Geist Variable Fallback';
+  src: local('Arial');
+  size-adjust: 97.4%;
+  ascent-override: 96%;
+  descent-override: 24%;
+  line-gap-override: 0%;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 :root {
@@ -190,15 +199,31 @@
 @layer base {
   * {
     @apply border-border outline-ring/50;
-    }
+  }
   body {
     @apply bg-background text-foreground;
-    }
+  }
   button:not(:disabled), [role="button"]:not(:disabled) {
     cursor: pointer;
-    }
+  }
   html {
     @apply font-sans;
-    }
+  }
+  p {
+    font-size: inherit;
+  }
+}
+
+.theme-icon {
+  display: none;
+}
+
+html.light .theme-icon-light,
+html.dark .theme-icon-dark {
+  display: inline-flex;
+}
+
+body {
+  font-family: 'Geist Variable', 'Geist Variable Fallback', sans-serif;
 }
 
