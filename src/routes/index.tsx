@@ -16,7 +16,7 @@ function App() {
 	const projects = Route.useLoaderData();
 
 	return (
-		<div className="flex flex-col gap-10 flex-1 max-w-2xl mx-auto w-full pt-12">
+		<div className="flex flex-col gap-10 flex-1 max-w-2xl mx-auto w-full py-12">
 			<ProfileDesc />
 			<RecentProjects projects={projects} />
 		</div>
