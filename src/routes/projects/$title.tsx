@@ -31,7 +31,7 @@ function ProjectDetail() {
 					})}
 				</p>
 			</header>
-			<Markdown markup={project.content} className="prose prose-compact" />
+			<Markdown markup={project.markup} className="prose prose-compact" />
 		</article>
 	);
 }
