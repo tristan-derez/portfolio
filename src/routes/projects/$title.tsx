@@ -5,6 +5,7 @@ import { ProjectNotFound } from "#/components/not-found/project-not-found";
 import { getLocale } from "#/paraglide/runtime";
 
 export const Route = createFileRoute("/projects/$title")({
+	loaderDeps: () => ({ locale: getLocale() }),
 	loader({ params }) {
 		const locale = getLocale();
 		const project = allProjects.find(
