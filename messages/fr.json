@@ -2,7 +2,6 @@
   "$schema": "https://inlang.com/schema/inlang-message-format",
   "home_page": "Accueil",
   "about_page": "À propos",
-  "seo_desc": "Portfolio de Tristan, développeur full stack",
   "page_not_found_title": "404 — Page introuvable",
   "page_not_found_desc": "La page recherchée est introuvable.",
   "page_not_found_btn": "Revenir à l'accueil",
@@ -23,5 +22,6 @@
   "contact_section_p": "Vous pouvez me retrouver sur ",
   "contact_section_n": "ou me contacter par ",
   "contact_mail": "email",
-  "projects_title": "Projets récents"
+  "projects_title": "Projets récents",
+  "projects_page_title": "Tristan Derez | Projets"
 }

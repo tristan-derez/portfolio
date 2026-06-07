@@ -2,7 +2,6 @@ import { createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
 import Header from "#/components/header";
 import { PageNotFound } from "#/components/not-found/page-not-found";
 import { ThemeProvider } from "#/components/theme/theme-provider";
-import { m } from "#/paraglide/messages";
 import { getLocale } from "#/paraglide/runtime";
 import "../styles.css";
 import { TooltipProvider } from "#/components/ui/tooltip";
@@ -23,11 +22,7 @@ export const Route = createRootRoute({
 					content: "width=device-width, initial-scale=1",
 				},
 				{
-					name: "description",
-					content: m.seo_desc(),
-				},
-				{
-					title: "Portfolio - Tristan",
+					title: "Tristan Derez",
 				},
 			],
 		};

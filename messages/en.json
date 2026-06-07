@@ -2,7 +2,6 @@
   "$schema": "https://inlang.com/schema/inlang-message-format",
   "home_page": "Home page",
   "about_page": "About page",
-  "seo_desc": "Tristan's portfolio — software developer",
   "page_not_found_title": "404 — Not Found",
   "page_not_found_desc": "The page you're looking for doesn't exist.",
   "page_not_found_btn": "Go home",
@@ -23,5 +22,6 @@
   "contact_section_p": "You can find me on ",
   "contact_section_n": "or reach me via ",
   "contact_mail": "hello@dreyz.me",
-  "projects_title": "Recent projects"
+  "projects_title": "Recent projects",
+  "projects_page_title": "Tristan Derez | Projects"
 }

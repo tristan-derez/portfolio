@@ -14,6 +14,12 @@ export const Route = createFileRoute("/projects/$title")({
 		if (!project) throw notFound();
 		return project;
 	},
+	head: ({ loaderData }) => ({
+		meta: [
+			{ title: `${loaderData?.title} | ${loaderData?.desc}` },
+			{ name: "description", content: loaderData?.desc },
+		],
+	}),
 	component: ProjectDetail,
 	notFoundComponent: ProjectNotFound,
 });

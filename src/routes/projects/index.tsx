@@ -7,9 +7,13 @@ import {
 	CardHeader,
 	CardTitle,
 } from "#/components/ui/card";
+import { m } from "#/paraglide/messages";
 import { getLocale } from "#/paraglide/runtime";
 
 export const Route = createFileRoute("/projects/")({
+	head: () => ({
+		meta: [{ title: `${m.projects_page_title()}` }],
+	}),
 	component: ProjectsIndex,
 });
 
